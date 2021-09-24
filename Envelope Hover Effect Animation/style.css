@@ -1,0 +1,74 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #acd2fb;
+}
+
+button {
+  padding: 10px 20px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #073668;
+  cursor: pointer;
+  border-radius: 12px;
+  outline: none;
+  border: none;
+  position: relative;
+}
+
+button::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "Envelope Button";
+  padding: 10px 20px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #7a004b;
+  cursor: pointer;
+  border-radius: 12px;
+  outline: none;
+  border: none;
+  transform: rotateX(270deg);
+  transform-origin: top;
+  transition: 0.5s;
+}
+
+button:hover::before {
+  transform: rotateX(0deg);
+}
+
+button::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "Envelope Button";
+  padding: 10px 20px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #026d40;
+  cursor: pointer;
+  border-radius: 12px;
+  outline: none;
+  border: none;
+  transform: rotateX(270deg);
+  transform-origin: bottom;
+  transition: 0.5s;
+  transition-delay: 0.5s;
+}
+
+button:hover::after {
+  transform: rotateX(0deg);
+}
+
+button:active {
+  transform: translateY(-4px);
+}
