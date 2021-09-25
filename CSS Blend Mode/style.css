@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main__div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background-image: url("https://i.pinimg.com/originals/3c/7f/a8/3c7fa839104f3343b28bcbf9a3d3db87.jpg");
+  background-size: 100% 100%;
+}
+
+h1 {
+  font-size: 4.8rem;
+  background-color: #fff;
+  padding: 12px;
+  mix-blend-mode: screen;
+  border-radius: 6px;
+}

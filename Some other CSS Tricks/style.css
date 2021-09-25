@@ -30,8 +30,18 @@
   color: #e24e49;
 }
 
-.link {
+.link:link {
   text-decoration: none;
+  color: #fff;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.link:active {
+  background-color: #fff;
+  color: #000;
 }
 
 .link:visited {

@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main__div {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #38ada9;
+  color: #fff;
+}
+
+.main__header * {
+  margin-top: 24px;
+  font-size: 18px;
+}
+
+li:first-child {
+  color: #4a69bd;
+}
+
+li:nth-child(2n) {
+  color: #b71540;
+}
+
+li:nth-child(2n + 1) {
+  color: #f6b93b;
+}
+
+li:not(:nth-child(2)) {
+  font-size: 2rem;
+}
