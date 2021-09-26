@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.main__div {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #222f3e;
+}
+
+.center__div {
+  width: 50%;
+  height: auto;
+}
+
+.center__div ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.center__div ul li {
+  list-style: none;
+  text-transform: uppercase;
+  font-size: 12rem;
+  color: #fff;
+  color: #576574;
+  animation: thunderlight 1.2s linear infinite;
+}
+
+@keyframes thunderlight {
+  0% {
+    color: #576574;
+    text-shadow: none;
+  }
+  90% {
+    color: #576574;
+    text-shadow: none;
+  }
+  100% {
+    color: #f1c40f;
+    text-shadow: 0 0 1rem #b35400;
+  }
+}
+
+.center__div ul li:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.center__div ul li:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.center__div ul li:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.center__div ul li:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+.center__div ul li:nth-child(5) {
+  animation-delay: 0.4s;
+}
+
+.center__div ul li:nth-child(6) {
+  animation-delay: 0.5s;
+}
+
+.center__div ul li:nth-child(7) {
+  animation-delay: 0.6s;
+}
