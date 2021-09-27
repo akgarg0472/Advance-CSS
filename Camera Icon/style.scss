@@ -1,0 +1,124 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+$camera__body: #d2dae2;
+$box-shadow: #222a2f;
+$power__btn: #0be881;
+$camera__lens: #259b81;
+
+.main__div {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(206, 21%, 94%);
+}
+
+.camera__body {
+  width: 25rem;
+  height: 15rem;
+  background-color: $camera__body;
+  border-radius: 1rem;
+  box-shadow: 0 1rem 1.2rem -1rem $box-shadow;
+  position: relative;
+}
+
+.camera__btn {
+  width: 3rem;
+  height: 1rem;
+  background-color: $power__btn;
+  position: absolute;
+  top: -1rem;
+  left: 2rem;
+  border-top-left-radius: 0.8rem;
+  border-top-right-radius: 0.8rem;
+}
+
+.camera__btn:active {
+  height: 0.6rem;
+  top: -0.6rem;
+}
+
+.camera__btn:hover {
+  cursor: pointer;
+  background-color: #09d877;
+}
+
+.camera__flash {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  background-color: #fff;
+  border-radius: 50%;
+  top: 1rem;
+  right: 2rem;
+  box-shadow: 0 1rem 1.2rem -1rem $box-shadow;
+}
+
+.camera__lens {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  background-color: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 1rem 1.2rem -1rem $box-shadow;
+  position: relative;
+}
+
+.camera__lens::before {
+  content: "";
+  position: absolute;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  background-color: $camera__lens;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.camera__lens::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-top: 3rem solid #98fb98;
+  border-right: 3rem solid #90ee90;
+  border-bottom: 3rem solid #2e8b57;
+  border-left: 3rem solid #3cb371;
+}
+
+.flash__animation {
+  animation-name: flash;
+  animation-duration: 0.25s;
+  animation-timing-function: linear;
+  animation-iteration-count: 2;
+  box-shadow: 0 1rem 1.2rem -1rem $box-shadow;
+}
+
+@keyframes flash {
+  0% {
+    box-shadow: none;
+  }
+  50% {
+    box-shadow: 0 0 10px #fff, 0 0 10px #fff, 0 0 10px #fff, 0 0 10px #fff,
+      0 0 20px #fff, 0 0 20px #fff, 0 0 20px #fff, 0 0 20px #fff;
+  }
+  100% {
+    box-shadow: none;
+  }
+}
