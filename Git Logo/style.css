@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.main__div {
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.logo {
+  width: 20rem;
+  height: 20rem;
+  background-color: #f05030;
+  border-radius: 12px;
+  position: relative;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.line1 {
+  width: 15rem;
+  height: 1.2rem;
+  background-color: #fff;
+  position: absolute;
+  top: 3rem;
+}
+
+.line1::before {
+  content: "";
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  top: -1rem;
+  left: 3rem;
+}
+
+.line1::after {
+  content: "";
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  top: -1rem;
+  right: -1rem;
+}
+
+.line2 {
+  width: 15rem;
+  height: 1.2rem;
+  background-color: #fff;
+  position: absolute;
+  top: 8rem;
+  left: 3rem;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.line2::before {
+  content: "";
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  top: -1rem;
+  right: -1rem;
+}
+/*# sourceMappingURL=style.css.map */
