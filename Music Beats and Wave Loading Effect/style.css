@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.main__div {
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #404b55;
+}
+
+.wave {
+  width: 0.8rem;
+  height: 16rem;
+  background-color: #fff;
+  margin: 0 1.2rem;
+  border-radius: 4px;
+  -webkit-animation: wave__animation 1s linear infinite;
+          animation: wave__animation 1s linear infinite;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-box-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa;
+          box-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa;
+}
+
+@-webkit-keyframes wave__animation {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0.25);
+            transform: scale(0.25);
+  }
+}
+
+@keyframes wave__animation {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0.25);
+            transform: scale(0.25);
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.main__div {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #404b55;
+}
+
+.wave {
+  width: 0.8rem;
+  height: 16rem;
+  background-color: #fff;
+  margin: 0 1.2rem;
+  border-radius: 4px;
+  animation: wave__animation 1s linear infinite;
+  transform-origin: bottom;
+  box-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa;
+}
+
+@keyframes wave__animation {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.25);
+  }
+}
