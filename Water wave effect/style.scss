@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.main__div {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #485460;
+}
+
+.wave {
+  height: 16rem;
+  width: 1rem;
+  color: #0000;
+  background-color: #fff;
+  margin: 0 0.8rem;
+  border: none;
+  border-radius: 4px;
+  animation: water 750ms linear infinite;
+  transform-origin: center;
+  box-shadow: 0 0 10px 2px #fff, 0 0 10px 2px #485460, 0 0 10px 2px #24dfa1,
+    0 0 10px 2px #a3e278;
+}
+
+@keyframes water {
+  0% {
+    transform: scale(0);
+    box-shadow: none;
+  }
+  50% {
+    transform: scale(1);
+    box-shadow: 0 0 10px 2px #fff, 0 0 10px 2px #485460, 0 0 10px 2px #24dfa1,
+      0 0 10px 2px #a3e278;
+  }
+  100% {
+    transform: scale(0);
+    box-shadow: none;
+  }
+}
