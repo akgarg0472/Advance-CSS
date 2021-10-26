@@ -1,0 +1,343 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$--day-bg: rgb(97, 208, 245);
+$--night-bg: rgb(25, 55, 65);
+$--day-cloud: #fff;
+$--night-cloud: rgb(192, 192, 192);
+
+html {
+  font-size: 62.5%;
+  overflow: hidden;
+  transition: all 0.5s linear;
+}
+
+.main__container {
+  height: 100vh;
+  width: 100vw;
+  background-color: $--night-bg;
+}
+
+.main__container::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  background-color: #fff;
+  height: 1.2rem;
+  bottom: 6rem;
+}
+
+.main__container::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  background-color: #578855;
+  height: 6rem;
+  bottom: 0;
+}
+
+.main__container .aeroplane {
+  position: absolute;
+  width: 16%;
+  bottom: 4.5rem;
+  animation: aeroplane-movement 30s linear infinite;
+}
+
+@keyframes aeroplane-movement {
+  0% {
+    left: -10%;
+  }
+  8% {
+    transform: none;
+  }
+  12% {
+    bottom: 4.5rem;
+    transform: scale(1) rotate(-5deg);
+  }
+  15% {
+    left: 20%;
+    bottom: 4.75rem;
+    transform: scale(0.95) rotate(-10deg);
+  }
+  47% {
+    bottom: 90%;
+    left: 100%;
+    transform: scale(0.5) rotate(-25deg);
+  }
+  50% {
+    transform: scale(0.5) rotate(172deg) rotateY(180deg) rotateZ(180deg);
+  }
+  70% {
+    transform: rotate(177deg) rotateY(180deg) rotateZ(180deg);
+  }
+  80% {
+    transform: rotate(185deg) rotateY(180deg) rotateZ(180deg);
+  }
+  85% {
+    left: 20%;
+    bottom: 4.75rem;
+    transform: scale(1) rotate(185deg) rotateY(180deg) rotateZ(180deg);
+  }
+  90% {
+    transform: rotate(180deg) rotateY(180deg) rotateZ(180deg);
+  }
+  100% {
+    left: -20%;
+    transform: scale(1) rotate(180deg) rotateY(180deg) rotateZ(180deg);
+  }
+}
+
+.main__container .aeroplane .plane {
+  transform: rotateX(-180deg) rotateZ(164deg);
+  object-fit: contain;
+  position: relative;
+  width: 100%;
+}
+
+.main__container .aeroplane::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  top: -11%;
+  left: 7%;
+  z-index: 1;
+  border-radius: 50%;
+  background-color: none;
+  animation: light-blink 1s linear infinite alternate-reverse;
+}
+
+@keyframes light-blink {
+  0% {
+    box-shadow: none;
+  }
+  25% {
+    box-shadow: 0 0 6px 4px #fff;
+    background-color: #fff;
+  }
+  50% {
+    box-shadow: none;
+  }
+}
+
+.main__container .aeroplane .wheel {
+  width: 6%;
+  height: 6%;
+  position: relative;
+  animation: wheel-rotate 250ms linear infinite;
+}
+
+.main__container .aeroplane .wheel-1 {
+  bottom: 1.6rem;
+  left: 42%;
+}
+
+.main__container .aeroplane .wheel-2 {
+  bottom: 1.6rem;
+  right: -77%;
+}
+
+@keyframes wheel-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.main__container .cloud {
+  position: relative;
+  background-color: $--night-cloud;
+  border-radius: 2.4rem;
+  box-shadow: 0 0 20px 4px #fff;
+  animation: cloud-animation 2s linear infinite alternate-reverse;
+}
+
+.main__container .cloud::before {
+  content: "";
+  position: absolute;
+  width: 40%;
+  height: 100%;
+  border-radius: 50%;
+  top: -25%;
+  left: 8%;
+  background-color: inherit;
+}
+
+.main__container .cloud::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  border-radius: 50%;
+  top: -50%;
+  left: 40%;
+  background-color: inherit;
+}
+
+.main__container .cloud-1 {
+  width: 14%;
+  height: 7%;
+  top: 7.5%;
+  left: 2%;
+}
+
+.main__container .cloud-2 {
+  width: 12%;
+  height: 6%;
+  top: 0;
+  left: 27%;
+  animation-delay: 0.5s;
+}
+
+.main__container .cloud-3 {
+  width: 7%;
+  height: 3.5%;
+  top: -5%;
+  left: 55%;
+  animation-delay: 1.5s;
+}
+
+.main__container .cloud-4 {
+  width: 10%;
+  height: 6%;
+  top: -10%;
+  left: 80%;
+  animation-delay: 2.5s;
+}
+
+@keyframes cloud-animation {
+  0% {
+    transform: translateX(-5%);
+  }
+  100% {
+    transform: translateX(5%);
+  }
+}
+
+// responsiveness
+@media screen and (max-width: 992px) {
+  .main__container .aeroplane {
+    bottom: 5rem;
+  }
+
+  .main__container .aeroplane .wheel-1,
+  .main__container .aeroplane .wheel-2 {
+    bottom: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main__container .aeroplane {
+    width: 18%;
+  }
+
+  .main__container .aeroplane .wheel-1,
+  .main__container .aeroplane .wheel-2 {
+    bottom: 1.1rem;
+  }
+
+  .main__container .cloud-1 {
+    height: 6%;
+  }
+
+  .main__container .cloud-4 {
+    height: 5%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .main__container .cloud-1 {
+    height: 5%;
+    width: 16%;
+  }
+
+  .main__container .cloud-2 {
+    height: 4%;
+    width: 14%;
+    top: 2%;
+  }
+
+  .main__container .cloud-3 {
+    height: 3%;
+    width: 10%;
+    top: -3%;
+  }
+
+  .main__container .cloud-4 {
+    height: 4%;
+    width: 14%;
+    top: -5%;
+  }
+
+  @keyframes aeroplane-movement {
+    0% {
+      left: -10%;
+    }
+    8% {
+      transform: none;
+    }
+    12% {
+      bottom: 4.5rem;
+      transform: scale(1) rotate(-5deg);
+    }
+    15% {
+      left: 20%;
+      bottom: 4.75rem;
+      transform: scale(0.95) rotate(-10deg);
+    }
+    47% {
+      bottom: 50%;
+      left: 100%;
+      transform: scale(0.5) rotate(-25deg);
+    }
+    50% {
+      transform: scale(0.5) rotate(172deg) rotateY(180deg) rotateZ(180deg);
+    }
+    70% {
+      transform: rotate(177deg) rotateY(180deg) rotateZ(180deg);
+    }
+    80% {
+      transform: rotate(185deg) rotateY(180deg) rotateZ(180deg);
+    }
+    85% {
+      left: 20%;
+      bottom: 4.75rem;
+      transform: scale(1) rotate(185deg) rotateY(180deg) rotateZ(180deg);
+    }
+    90% {
+      transform: rotate(180deg) rotateY(180deg) rotateZ(180deg);
+    }
+    100% {
+      left: -20%;
+      transform: scale(1) rotate(180deg) rotateY(180deg) rotateZ(180deg);
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .main__container .aeroplane {
+    width: 20%;
+  }
+
+  .main__container .cloud-1 {
+    height: 4%;
+  }
+
+  .main__container .cloud-2 {
+    height: 3%;
+  }
+
+  .main__container .cloud-3 {
+    top: -1%;
+  }
+
+  .main__container .cloud-4 {
+    height: 3%;
+    top: -4%;
+  }
+}

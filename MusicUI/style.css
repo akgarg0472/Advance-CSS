@@ -1,0 +1,350 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.main__container {
+  height: 100vh;
+  width: 100vw;
+  background-color: #2769aa;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+
+.main__container .music__player__container {
+  width: 40rem;
+  height: 40rem;
+  position: relative;
+}
+
+.main__container .music__player__container .disk {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-animation: rotate 2s linear infinite;
+  animation: rotate 2s linear infinite;
+}
+
+.main__container .music__player__container .plate {
+  position: absolute;
+  -o-object-fit: cover;
+  object-fit: cover;
+  height: 75%;
+  top: 45%;
+  right: -10%;
+  -webkit-transform: translate(-50%, -50%) rotateZ(392deg);
+  transform: translate(-50%, -50%) rotateZ(392deg);
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.main__container .music__player__container .heart {
+  position: relative;
+  top: 48%;
+  left: 47%;
+  width: 6%;
+  height: 6%;
+  background-color: #fff;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-animation: zoom-in-out 1s linear infinite;
+  animation: zoom-in-out 1s linear infinite;
+}
+
+@-webkit-keyframes zoom-in-out {
+  0% {
+    -webkit-transform: rotate(45deg) scale(1);
+    transform: rotate(45deg) scale(1);
+  }
+  25% {
+    -webkit-transform: rotate(45deg) scale(1.2);
+    transform: rotate(45deg) scale(1.2);
+  }
+  50% {
+    -webkit-transform: rotate(45deg) scale(1.1);
+    transform: rotate(45deg) scale(1.1);
+  }
+  75% {
+    -webkit-transform: rotate(45deg) scale(1.2);
+    transform: rotate(45deg) scale(1.2);
+  }
+  100% {
+    -webkit-transform: rotate(45deg) scale(1);
+    transform: rotate(45deg) scale(1);
+  }
+}
+
+@keyframes zoom-in-out {
+  0% {
+    -webkit-transform: rotate(45deg) scale(1);
+    transform: rotate(45deg) scale(1);
+  }
+  25% {
+    -webkit-transform: rotate(45deg) scale(1.2);
+    transform: rotate(45deg) scale(1.2);
+  }
+  50% {
+    -webkit-transform: rotate(45deg) scale(1.1);
+    transform: rotate(45deg) scale(1.1);
+  }
+  75% {
+    -webkit-transform: rotate(45deg) scale(1.2);
+    transform: rotate(45deg) scale(1.2);
+  }
+  100% {
+    -webkit-transform: rotate(45deg) scale(1);
+    transform: rotate(45deg) scale(1);
+  }
+}
+
+.main__container .music__player__container .heart::before {
+  content: "";
+  position: absolute;
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  top: -50%;
+  border-radius: 50%;
+}
+
+.main__container .music__player__container .heart::after {
+  content: "";
+  position: absolute;
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  left: -50%;
+  border-radius: 50%;
+}
+
+.main__container .waves__container {
+  margin-top: 2rem;
+}
+
+.main__container .waves__container .waves {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.wave {
+  height: 8rem;
+  width: 0.5rem;
+  background-color: #656361;
+  margin: 0 0.6rem;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  -webkit-transform-origin: center;
+  transform-origin: center;
+  -webkit-box-shadow: 0 0 2px 2px #fff, 0 0 2px 2px #fff, 0 0 2px 2px #fff,
+    0 0 2px 2px #fff;
+  box-shadow: 0 0 2px 2px #fff, 0 0 2px 2px #fff, 0 0 2px 2px #fff,
+    0 0 2px 2px #fff;
+  -webkit-animation: waves 750ms linear infinite;
+  animation: waves 750ms linear infinite;
+}
+
+@-webkit-keyframes waves {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+  50% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-box-shadow: 0 0 4px 2px #fff, 0 0 4px 2px #fff, 0 0 4px 2px #fff,
+      0 0 4px 2px #fff;
+    box-shadow: 0 0 4px 2px #fff, 0 0 4px 2px #fff, 0 0 4px 2px #fff,
+      0 0 4px 2px #fff;
+  }
+  100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+}
+
+@keyframes waves {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+  50% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-box-shadow: 0 0 4px 2px #fff, 0 0 4px 2px #fff, 0 0 4px 2px #fff,
+      0 0 4px 2px #fff;
+    box-shadow: 0 0 4px 2px #fff, 0 0 4px 2px #fff, 0 0 4px 2px #fff,
+      0 0 4px 2px #fff;
+  }
+  100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+}
+
+.main__container .name {
+  color: #fff;
+  position: relative;
+  margin-top: 4.8rem;
+  font-size: 2.8rem;
+  font-family: "Maven Pro", sans-serif;
+}
+
+.main__container .name::after {
+  content: "✈️";
+  content: "";
+  position: absolute;
+  margin-left: 8px;
+  top: 0%;
+  left: 100%;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+
+@-webkit-keyframes takeoff {
+  0% {
+    -webkit-transform: scale(1) rotate(0deg);
+    transform: scale(1) rotate(0deg);
+  }
+  40% {
+    text-shadow: 2px 2px 12px #fff;
+    top: -100%;
+    left: 130%;
+    opacity: 0;
+    -webkit-transform: scale(0.75);
+    transform: scale(0.75);
+  }
+  50% {
+    text-shadow: 2px 2px 16px #fff;
+    -webkit-transform: scale(0.75) rotate(180deg);
+    transform: scale(0.75) rotate(180deg);
+  }
+  60% {
+    -webkit-transform: scale(0.75) rotate(180deg);
+    transform: scale(0.75) rotate(180deg);
+  }
+  90% {
+    top: 0%;
+    left: 100%;
+    -webkit-transform: scale(1.05) rotate(180deg);
+    transform: scale(1.05) rotate(180deg);
+  }
+  100% {
+    -webkit-transform: scale(1) rotate(0deg);
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+@keyframes takeoff {
+  0% {
+    -webkit-transform: scale(1) rotate(0deg);
+    transform: scale(1) rotate(0deg);
+  }
+  40% {
+    text-shadow: 2px 2px 12px #fff;
+    top: -100%;
+    left: 130%;
+    opacity: 0;
+    -webkit-transform: scale(0.75);
+    transform: scale(0.75);
+  }
+  50% {
+    text-shadow: 2px 2px 16px #fff;
+    -webkit-transform: scale(0.75) rotate(180deg);
+    transform: scale(0.75) rotate(180deg);
+  }
+  60% {
+    -webkit-transform: scale(0.75) rotate(180deg);
+    transform: scale(0.75) rotate(180deg);
+  }
+  90% {
+    top: 0%;
+    left: 100%;
+    -webkit-transform: scale(1.05) rotate(180deg);
+    transform: scale(1.05) rotate(180deg);
+  }
+  100% {
+    -webkit-transform: scale(1) rotate(0deg);
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .main__container .music__player__container {
+    width: 33rem;
+    height: 33rem;
+  }
+  .main__container .waves__container {
+    top: 70%;
+  }
+  .main__container .waves__container .wave {
+    height: 6rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .main__container .music__player__container {
+    width: 25rem;
+    height: 25rem;
+  }
+  .main__container .waves__container {
+    top: 70%;
+  }
+  .main__container .waves__container .wave {
+    height: 6rem;
+  }
+}
