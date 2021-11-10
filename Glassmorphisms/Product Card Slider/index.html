@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Card Slider</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <ul class="thumb">
+        <li onmouseover="changeImage(this.firstElementChild.src)">
+          <img src="./Images/shoes1.png" />
+        </li>
+        <li onmouseover="changeImage(this.firstElementChild.src)">
+          <img src="./Images/shoes2.png" />
+        </li>
+        <li onmouseover="changeImage(this.firstElementChild.src)">
+          <img src="./Images/shoes3.png" />
+        </li>
+      </ul>
+
+      <div class="imgBox">
+        <h2>Nike Shoes</h2>
+        <img src="./Images/shoes1.png" id="shoe__image" />
+        <ul class="size">
+          <span>Size</span>
+          <li>X</li>
+          <li>X</li>
+          <li>X</li>
+          <li>X</li>
+        </ul>
+        <a class="btn" href="#">Checkout</a>
+      </div>
+    </div>
+
+    <script>
+      const changeImage = (image) => {
+        document.querySelector("#shoe__image").src = image;
+      };
+    </script>
+  </body>
+</html>

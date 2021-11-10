@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main__container {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(10, 25, 41);
+  overflow: hidden;
+}
+
+.moon {
+  position: absolute;
+  height: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 12px;
+  width: 100px;
+  background: url("./images/moon.png") no-repeat;
+  background-size: contain;
+  animation: scaling 15s linear infinite;
+}
+
+@keyframes scaling {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(-50%) scale(4);
+  }
+}
+
+.rocket {
+  position: relative;
+  background: url("./images/rocket.png") no-repeat;
+  background-size: contain;
+  height: 75px;
+  width: 75px;
+  left: 54%;
+  top: 86.25%;
+  top: 50%;
+  transform: translateX(-50%);
+  animation: rocket_launch 15s linear infinite;
+}
+
+@keyframes rocket_launch {
+  0% {
+    top: 86.25%;
+  }
+  20% {
+    top: 70%;
+  }
+  60% {
+    top: 20%;
+  }
+  100% {
+    top: -50%;
+    transform: translateX(-50%) scale(1.5);
+  }
+}
+
+.rocket::before {
+  content: "";
+  position: absolute;
+  color: #fff;
+  width: 100%;
+  width: 100%;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-55%);
+  text-shadow: 0 2px 8px #fff;
+  mix-blend-mode: multiply;
+}
+
+.rocket::after {
+  position: absolute;
+  content: "";
+  bottom: -32%;
+  height: 24px;
+  width: 12px;
+  left: 21%;
+  border-radius: 50%;
+  background-color: #e25822;
+  box-shadow: 0 0 20px 0px #e25822;
+  animation: flame 2s linear infinite alternate-reverse;
+}
+
+@keyframes flame {
+  0% {
+    box-shadow: 0 0 20px 0px #e25822;
+  }
+  100% {
+    box-shadow: 0 10px 20px 6px #e25822;
+  }
+}
+
+.platform {
+  position: absolute;
+  width: 200px;
+  height: 2%;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #055682;
+}
