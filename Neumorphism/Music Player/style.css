@@ -1,0 +1,113 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100vh;
+  background: #f9f9f9;
+}
+
+.music {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.title {
+  font-weight: 400;
+  font-size: 2em;
+  color: #38a7ff;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.player {
+  position: relative;
+  width: 500px;
+  min-height: 100px;
+  background: #fbfbfb;
+  border: 2px solid #fff;
+  -webkit-box-shadow: -10px -10px 15px #fff, 10px 10px 15px rgba(0, 0, 0, 0.05), inset -5px -5px 15px #fff, inset 5px 5px 10px rgba(0, 0, 0, 0.05);
+          box-shadow: -10px -10px 15px #fff, 10px 10px 15px rgba(0, 0, 0, 0.05), inset -5px -5px 15px #fff, inset 5px 5px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 80px;
+  padding: 10px 20px;
+}
+
+.btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.btns span {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  background: #f9f9f9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-box-shadow: -4px -4px 6px white, 4px 4px 8px rgba(0, 0, 0, 0.1);
+          box-shadow: -4px -4px 6px white, 4px 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 1.6em;
+  color: #fbfbfb;
+}
+
+.btns span:active {
+  -webkit-box-shadow: inset -4px -4px 8px white, inset 4px 4px 8px rgba(0, 0, 0, 0.1);
+          box-shadow: inset -4px -4px 8px white, inset 4px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.active {
+  -webkit-box-shadow: inset -4px -4px 8px white, inset 4px 4px 8px rgba(0, 0, 0, 0.1) !important;
+          box-shadow: inset -4px -4px 8px white, inset 4px 4px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+.btns .playPause {
+  height: 90px;
+  width: 90px;
+}
+
+.fas {
+  -webkit-filter: drop-shadow(0 0 1px #000);
+          filter: drop-shadow(0 0 1px #000);
+}
+/*# sourceMappingURL=style.css.map */

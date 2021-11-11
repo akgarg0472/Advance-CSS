@@ -1,0 +1,29 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #a740e6;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+}
+
+.text {
+  position: relative;
+  display: block;
+  font-size: 8em;
+  margin: 2rem auto;
+  color: #a740e6;
+  text-shadow: -1px 1px 1px rgba(0, 0, 0, 0.4), 1px -1px 0 white;
+}
+/*# sourceMappingURL=style.css.map */

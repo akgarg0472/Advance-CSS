@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player Neumorphism Design</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="music">
+      <h2 class="title">Music Title</h2>
+      <div class="player">
+        <audio src=""></audio>
+        <div class="btns">
+          <span class="prev"><i class="fas fa-backward"></i></span>
+          <span class="playPause"><i class="fas fa-play"></i></span>
+          <span class="next"><i class="fas fa-forward"></i></span>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const title = document.querySelector(".title");
+      const prev = document.querySelector(".prev");
+      const playPause = document.querySelector(".playPause");
+      const next = document.querySelector(".next");
+      const audio = document.querySelector("audio");
+
+      const songsList = [
+        {
+          index: 0,
+          path: "./music/1.mp3",
+          songName: "Music First",
+        },
+        {
+          index: 1,
+          path: "./music/2.mp3",
+          songName: "Music Second",
+        },
+        {
+          index: 2,
+          path: "./music/3.mp3",
+          songName: "Music Third",
+        },
+        {
+          index: 3,
+          path: "./music/4.mp3",
+          songName: "Music Fourth",
+        },
+        {
+          index: 4,
+          path: "./music/5.mp3",
+          songName: "Music Fifth",
+        },
+      ];
+
+      let songPlaying = false;
+
+      const playSong = () => {
+        songPlaying = true;
+        playPause.innerHTML = '<i class="fas fa-pause"></i>';
+        audio.play();
+        playPause.classList.add("active");
+      };
+
+      const pauseSong = () => {
+        playPause.classList.remove("active");
+        songPlaying = false;
+        playPause.innerHTML = '<i class="fas fa-play"></i>';
+        audio.pause();
+      };
+
+      playPause.addEventListener("click", () => {
+        songPlaying ? pauseSong() : playSong();
+      });
+
+      const loadSong = (song) => {
+        title.textContent = `${song.index + 1}. ${song.songName}`;
+        audio.src = song.path;
+      };
+
+      let i = 0;
+      loadSong(songsList[i]);
+
+      const prevSong = () => {
+        pauseSong();
+        i--;
+        if (i < 0) {
+          i = songsList.length - 1;
+        }
+        loadSong(songsList[i]);
+        playSong();
+      };
+
+      const nextSong = () => {
+        pauseSong();
+        i++;
+        if (i === songsList.length) {
+          i = 0;
+        }
+        loadSong(songsList[i]);
+        playSong();
+      };
+
+      prev.addEventListener("click", prevSong);
+      next.addEventListener("click", nextSong);
+    </script>
+  </body>
+</html>

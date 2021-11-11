@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #091921;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container p {
+  color: #215e65;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.container label {
+  position: relative;
+  margin: 8px;
+}
+
+.container label input[type="radio"] {
+  display: none;
+  cursor: pointer;
+}
+
+.container label .fas {
+  position: relative;
+  height: 40px;
+  width: 40px;
+  background: #091921;
+  line-height: 40px;
+  text-align: center;
+  color: #6f6f6f;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: -1px -1px 3px rgba(255, 255, 255, 0.1),
+    2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+.container label .fas:hover {
+  box-shadow: inset -1px -1px 3px rgba(255, 255, 255, 0.1),
+    inset 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+.container label input:checked ~ .fa-check {
+  box-shadow: inset -1px -1px 3px rgba(255, 255, 255, 0.1),
+    inset 2px 2px 6px rgba(0, 0, 0, 0.8);
+  color: #00fff1;
+}
+
+.container label input:checked ~ .fa-times {
+  box-shadow: inset -1px -1px 3px rgba(255, 255, 255, 0.1),
+    inset 2px 2px 6px rgba(0, 0, 0, 0.8);
+  color: #ee4b2b;
+}
