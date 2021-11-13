@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lamp Header Design</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <nav>
+        <img src="./images/menu.png" class="menu__image" />
+        <a href="/"><img src="./images/logo.png" class="logo" /></a>
+
+        <ul>
+          <li><a href="#">Lorem</a></li>
+          <li><a href="#">Lorem</a></li>
+          <li><a href="#">Lorem</a></li>
+          <li><a href="#">Lorem</a></li>
+        </ul>
+
+        <button type="button" onclick="toggleLight()" id="toggle__btn">
+          <span></span>
+        </button>
+      </nav>
+
+      <div class="lamp__container">
+        <img src="./images/lamp.png" alt="lamp" class="lamp" />
+        <img
+          src="./images/light.png"
+          alt="lamp light"
+          class="light"
+          id="light"
+        />
+      </div>
+
+      <div class="text__container">
+        <h1>Lorem ipsum dolor</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+          culpa quos voluptate expedita possimus itaque quam, unde dolorum
+          atque.
+        </p>
+        <a href="#">Lorem ipsum</a>
+
+        <div class="control">
+          <p>00</p>
+          <div class="line"></div>
+          <p>01</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
