@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dark Light Theme Toggle</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <nav>
+        <a href="/"> <img src="./images/logo.png" alt="logo" class="logo" /></a>
+        <ul>
+          <li><a href="#">Lorem</a></li>
+          <li><a href="#">Lorem</a></li>
+          <li><a href="#">Lorem</a></li>
+          <li><a href="#">Lorem</a></li>
+          <li><a href="#">Lorem</a></li>
+        </ul>
+
+        <img
+          src="./images/moon.png"
+          alt="theme icon"
+          class="theme__icon"
+          id="theme__icon"
+          onclick="toggleTheme()"
+        />
+      </nav>
+
+      <div class="content">
+        <div class="info">
+          <h1>I'm <span>Lorem ipsum</span></h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit quis
+            itaque aliquid officiis blanditiis quas commodi atque voluptates.
+          </p>
+          <a href="#">Learn More</a>
+        </div>
+
+        <div class="picture">
+          <img
+            src="./images/pattern.png"
+            alt="profile picture pattern"
+            class="pattern"
+          />
+          <img src="./images/profile.png" alt="profile picture" class="image" />
+        </div>
+      </div>
+
+      <div class="social_icons">
+        <a href="#" class="social_icon_link"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a href="#" class="social_icon_link"><i class="fab fa-github"></i></a>
+        <a href="#" class="social_icon_link"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
