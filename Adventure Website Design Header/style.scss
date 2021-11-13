@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+    url("./images/background.png") no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  background-attachment: fixed;
+}
+
+nav {
+  padding: 30px 3%;
+  display: flex;
+  align-items: center;
+}
+
+nav ul {
+  flex: 1;
+  text-align: right;
+}
+
+nav ul li {
+  list-style-type: none;
+  display: inline-block;
+  margin: 10px 30px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+nav .logo {
+  width: 28px;
+  cursor: pointer;
+}
+
+nav .menu__icon {
+  width: 32px;
+  cursor: pointer;
+  margin: 0 20px;
+}
+
+.social__media {
+  transform: rotate(90deg) translate(-100%);
+  transform-origin: left;
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+}
+
+.social__media a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 24px;
+}
+
+.line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 8%;
+  width: 2px;
+  background-color: rgba($color: #fff, $alpha: 0.3);
+}
+
+.row {
+  width: 75%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  margin-top: 6%;
+}
+
+.row .info {
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  position: relative;
+}
+
+.row .info::before {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 100%;
+  left: -16px;
+  top: 0;
+  background-color: rgba($color: #fff, $alpha: 0.4);
+}
+
+.row .info span {
+  margin: 16px 0;
+}
+
+.row .content .location__info {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.row span img {
+  width: 16px;
+  margin-right: 16px;
+}
+
+.row .content h1 {
+  font-size: 72px;
+  margin-top: 32px;
+  margin-bottom: 16px;
+}
+
+.arrow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 32px;
+  width: 75%;
+  left: 12.5%;
+}
+
+.arrow img {
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+}
