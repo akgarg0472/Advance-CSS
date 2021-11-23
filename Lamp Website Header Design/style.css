@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .container {
@@ -19,8 +19,8 @@ nav {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 20px 8%;
 }
 
@@ -37,8 +37,8 @@ nav .logo {
 
 nav ul {
   -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   text-align: right;
 }
 
@@ -93,7 +93,7 @@ nav button span {
   top: 97%;
   left: 50%;
   -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   width: 700px;
   margin-left: -10px;
   opacity: 0;
@@ -130,8 +130,10 @@ nav button span {
 .text__container a:hover {
   background: #fff;
   color: #1d2025;
-  -webkit-box-shadow: 0 0 2px 2px #00986f, 0 0 2px 2px #fff, 0 0 2px 2px #00986f, 0 0 2px 2px #ffff;
-          box-shadow: 0 0 2px 2px #00986f, 0 0 2px 2px #fff, 0 0 2px 2px #00986f, 0 0 2px 2px #ffff;
+  -webkit-box-shadow: 0 0 2px 2px #00986f, 0 0 2px 2px #fff, 0 0 2px 2px #00986f,
+    0 0 2px 2px #ffff;
+  box-shadow: 0 0 2px 2px #00986f, 0 0 2px 2px #fff, 0 0 2px 2px #00986f,
+    0 0 2px 2px #ffff;
 }
 
 .control {
@@ -139,11 +141,11 @@ nav button span {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
   margin-top: 200px;
 }
 
