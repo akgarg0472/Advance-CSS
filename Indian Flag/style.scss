@@ -1,0 +1,170 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+$marginLeftWidth: 6px;
+$barTopHeight: $marginLeftWidth * 1.25;
+$barTopWidth: $marginLeftWidth * 1.25;
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: #3385cd;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.indian__flag {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 50%;
+  height: 80%;
+  margin: auto;
+}
+
+.indian__flag .bar {
+  position: relative;
+  display: flex;
+  margin-left: -25%;
+  height: 80%;
+  width: $marginLeftWidth;
+  background-color: #cacaca;
+}
+
+.indian__flag .bar::before {
+  position: absolute;
+  content: "";
+  top: -$barTopHeight;
+  left: 0;
+  width: 100%;
+  height: $barTopHeight;
+  background-color: #0000ff;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+}
+
+.indian__flag .bar .flag {
+  margin-left: $marginLeftWidth;
+  position: absolute;
+  width: 240px;
+  padding: 0;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  border-top-right-radius: 0.6rem;
+  border-bottom-right-radius: 0.6rem;
+}
+
+.indian__flag .bar .flag .saffron {
+  width: 240px;
+  height: 40px;
+  background-color: orange;
+  border-top-right-radius: 0.6rem;
+}
+
+.indian__flag .bar .flag .white {
+  width: 240px;
+  height: 40px;
+  background-color: white;
+  padding: 1px;
+}
+
+.indian__flag .bar .flag .white .circle {
+  border-radius: 100%;
+  border: 2px solid #000088;
+  height: 38px;
+  width: 38px;
+  margin: auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: rotate 7300ms linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.indian__flag .bar .flag .white .circle .spoke {
+  width: 1px;
+  background-color: #0000ff;
+  height: 100%;
+  position: absolute;
+}
+
+.indian__flag .bar .flag .green {
+  width: 240px;
+  height: 40px;
+  background-color: green;
+  border-bottom-right-radius: 0.6rem;
+}
+
+.indian__flag .bar .steps {
+  position: absolute;
+  bottom: 0;
+  width: 200px;
+  height: 70px;
+  margin-left: -92px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.indian__flag .bar .steps .step__1 {
+  height: 50%;
+  width: 70%;
+  background-color: #979797;
+  box-shadow: 0 1px 4px #485460;
+}
+
+.indian__flag .bar .steps .step__2 {
+  height: 50%;
+  width: 100%;
+  background-color: #979797;
+  box-shadow: 0 1px 4px #485460;
+}
+
+.flower {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  bottom: 100%;
+  pointer-events: none;
+  top: 50%;
+  background-size: cover !important;
+  object-fit: contain !important;
+  animation: drop 3000ms linear infinite;
+}
+
+@keyframes drop {
+  0% {
+    opacity: 0;
+    top: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+  }
+}
