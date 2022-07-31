@@ -180,10 +180,7 @@ html {
   border: none;
   outline: none;
   border-radius: 4px;
-  -webkit-transform-origin: center;
   transform-origin: center;
-  -webkit-box-shadow: 0 0 2px 2px #fff, 0 0 2px 2px #fff, 0 0 2px 2px #fff,
-    0 0 2px 2px #fff;
   box-shadow: 0 0 2px 2px #fff, 0 0 2px 2px #fff, 0 0 2px 2px #fff,
     0 0 2px 2px #fff;
   -webkit-animation: waves 750ms linear infinite;
